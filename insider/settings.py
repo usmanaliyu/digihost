@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['africanstartup.azurewebsites.net']
 
@@ -154,8 +154,14 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+=======
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR,'static/')
+]
+>>>>>>> c1e679c3631fb1c5b3a4f2b64be477882b35ecc2
 
 
 
