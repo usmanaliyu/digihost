@@ -154,7 +154,8 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT='D:/home/site/wwwroot/static'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 
