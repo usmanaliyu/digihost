@@ -26,7 +26,7 @@ SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['165.22.121.117']
 
 
 # Application definition
@@ -102,7 +102,11 @@ WSGI_APPLICATION = 'insider.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'insider',
+        'USER': 'usman',
+        'PASSWORD': 'abbatibabu1A',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -154,9 +158,7 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'static/')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 
