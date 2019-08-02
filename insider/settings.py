@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['africanstartup.azurewebsites.net']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'insider.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
@@ -154,14 +154,9 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-=======
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static/')
 ]
->>>>>>> c1e679c3631fb1c5b3a4f2b64be477882b35ecc2
 
 
 
