@@ -26,7 +26,7 @@ SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['165.22.121.117']
+ALLOWED_HOSTS = ['165.22.124.9']
 
 
 # Application definition
@@ -148,7 +148,7 @@ USE_TZ = True
 
 CACHES = { 'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
+        'LOCATION': '165.22.121.117:11211',
     }
 }
 
@@ -158,9 +158,8 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATICFILES_DIRS=[
-        os.path.join(BASE_DIR,'static/')
+os.path.join(BASE_DIR,'static/')
 ]
 
 
