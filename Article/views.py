@@ -165,7 +165,6 @@ def events(request):
 
 
 
-
 @cache_page(60 * 15)
 def detail(request,article_slug):
     instance = get_object_or_404(Article,slug=article_slug)
@@ -179,7 +178,7 @@ def detail(request,article_slug):
 
 
 
-
+    app_url = request.path
 
     initial_data={
         'content_type': instance.get_content_type,
@@ -232,7 +231,7 @@ def detail(request,article_slug):
         'instance':instance,
         'comments': comments,
         'comment_form':form,
-
+	'app_url': app_url,
         'similar_posts':similar_posts,
         'categories':categories,
         'sub':sub,

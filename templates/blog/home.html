@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load thumbnail %}
+
+{% block head %}
+<meta name="description" content="Our goal is to help you grow your African Business by connecting you to oppurtunities. ">
+{% endblock %}
+
 {% block title %}
-Home
+Startup-africa.com|Community for African Startups
 {% endblock %}
 
 {% block content %}
@@ -10,11 +15,12 @@ Home
             <div class="overlay"></div>
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
-                    <p>Looking For Investment Oppurtunities In Africa?</p>
-                    <small>Explore within thousands of African Startup available.</small>
+						
+                    <p><span>Our goal is to help you grow your business</span></p>
+			<small>CONNECTING YOU TO OPPURTUNITY</small>                    
                     <div class="btn-wrapper">
                         <div class="text-center">
-                            <a href="{% url 'listing_home' %}" class="btn btn-primary wow slideInLeft">EXPLORE</a> &nbsp;&nbsp;&nbsp;
+                            <a href="{% url 'list_create' %}" class="btn btn-primary wow slideInLeft">JOIN US</a> &nbsp;&nbsp;&nbsp;
                         </div>
                     </div><!-- end row -->
                 </div>
@@ -55,11 +61,7 @@ Home
                                 <p>{{ Article.summary|truncatechars:250  }}</p>
                             </div><!-- end blog-desc -->
 
-                            <div class="post-meta">
-                                <ul class="list-inline">
-                                    <li><a href="#" align="center">{{Article.pub_date|timesince}} ago</a></li>
-
-                            </div><!-- end post-meta -->
+                            
 
                         </div><!-- end blog -->
 
@@ -110,7 +112,7 @@ Home
 
 
                                                 <h4><a href="{% url 'detail' Article.slug %}"> {{ Article.title }}</a></h4>
-                                                <p> {{ Article.summary|truncatechars:250   }}<a href="{% url 'detail' Article.slug%}">...</a></p>
+                                                <p> {{ Article.summary|truncatechars:290   }}<a href="{% url 'detail' Article.slug%}">...</a></p>
 
 
                                                 {% if Article.tags %}

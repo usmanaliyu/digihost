@@ -2,7 +2,6 @@ from django.urls import path
 from django.views.decorators.cache import cache_page
 from . import views
 
-
 urlpatterns = [
     path('',cache_page(60 * 15)(views.home),name='home'),
     path('articles/',views.Articles_list, name='articles_list'),
@@ -11,8 +10,4 @@ urlpatterns = [
 
     path('tags/<str:tags_slug>/', views.tagged, name='tagged'),
     path('search',views.search, name='search'),
-
-
-    path('events/', views.events, name='events'),
-
 ]

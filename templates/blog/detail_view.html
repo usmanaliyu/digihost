@@ -1,9 +1,31 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% load thumbnail%}
 {% load crispy_forms_tags %}
 {% block title %}
 {{ instance.title }}
+{% endblock %}
+{% block head %}
+<meta name="description" content="{{ meta_description}}"/>
+<meta name="keywords" content="{{ keywords }}"/>
+<meta property='og:locale' content='en_US'/>
+<meta property="og:type" content="article"/>
+
+<meta property="og:title" content="{{ instance.title }}"/>
+<meta property="og:description" content="{{ instance.description }}"/>
+<meta property="og:image" content="{{ instance.preview_image.url }}"/>
+<meta property="article:published_time" content="{{ instance.pub_date}}"/>
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@startup__africa" />
+<meta name="twitter:creator" content="@startup__africa" />
+<meta property="og:url" content="{{ request.build_absolute_uri}}" />
+<meta property="og:title" content="{{ instance.title}}" />
+<meta property="og:description" content="{{ instance.meta_description}}" />
+<meta property="og:image" content="{{ instance.preview_image.url }}" />
 {% endblock %}
 {% block content %}
 
@@ -98,6 +120,21 @@
   {{ instance.blockquote1}}
 </blockquote>
 {% endif %}
+
+
+<ul>
+
+{% if l_1_1 %}<li>{{ l_1_1 }}</li>{% endif %}
+{% if l_1_2 %}<li>{{ l_1_2 }}</li>{% endif %}
+{% if l_1_3 %}<li>{{ l_1_3 }}</li>{% endif %}
+{% if l_1_4 %}<li>{{ l_1_4 }}</li>{% endif %}
+{% if l_1_5 %}<li>{{ l_1_5 }}</li>{% endif %}
+{% if l_1_6 %}<li>{{ l_1_6 }}</li>{% endif %}
+{% if l_1_7 %}<li>{{ l_1_7 }}</li>{% endif %}
+{% if l_1_8 %}<li>{{ l_1_8 }}</li>{% endif %}
+{% if l_1_9 %}<li>{{ l_1_9 }}</li>{% endif %}
+{% if l_1_10 %}<li>{{ l_1_10 }}</li>{% endif %}
+</ul>
                                         {% endif %}
 
 
@@ -329,7 +366,21 @@
   {{ instance.blockquote5}}
 </blockquote>
 {% endif %}
-                                        {% endif %}
+
+<ul>
+
+{% if l_2_1 %}<li>{{ l_2_1 }}</li>{% endif %}
+{% if l_2_2 %}<li>{{ l_2_2 }}</li>{% endif %}
+{% if l_2_3 %}<li>{{ l_2_3 }}</li>{% endif %}
+{% if l_2_4 %}<li>{{ l_2_4 }}</li>{% endif %}
+{% if l_2_5 %}<li>{{ l_2_5 }}</li>{% endif %}
+{% if l_2_6 %}<li>{{ l_2_6 }}</li>{% endif %}
+{% if l_2_7 %}<li>{{ l_2_7 }}</li>{% endif %}
+{% if l_2_8 %}<li>{{ l_2_8 }}</li>{% endif %}
+{% if l_2_9 %}<li>{{ l_2_9 }}</li>{% endif %}
+{% if l_2_10 %}<li>{{ l_2_10 }}</li>{% endif %}
+</ul>
+        {% endif %}
 
 
 
@@ -478,3 +529,4 @@
         </section>
 
 {% endblock %}
+

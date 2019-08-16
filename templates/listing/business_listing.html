@@ -94,7 +94,7 @@ All Businesses
                                         <a href="{% url 'listing_detail' Listing.slug %}">{{ Listing.company_name|truncatechars:25}}</a>
                                         <a href="{{ Listing.category.get_absolute_url }}"><small> {{ Listing.category }}</small></a>
                                     </h4>
-                                    <p>{{ Listing.description|truncatechars:100}}</p>
+                                    <p>{{ Listing.description|truncatechars:150}}</p>
                                 </div>
                                 <!-- end details -->
 

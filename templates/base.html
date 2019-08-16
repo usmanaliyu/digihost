@@ -5,14 +5,26 @@
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
+{% block head %}{% endblock %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145333544-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145333544-1');
+</script>
 
 
-  
-
-
-
-
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1284915735814867",
+    enable_page_level_ads: true
+  });
+</script>
 
 
 
@@ -25,7 +37,7 @@
 
     <!-- Site Meta -->
     <title>{% block title %}{% endblock %}</title>
-    <meta name="keywords" content="">
+    <meta name="keywords" content="African startup. African Business. Business Africa. Startup Africa. Entreprenuership. Africa business Listing. Marketing. Business directory. African Business directory">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,10 +45,7 @@
     <link rel="shortcut icon" href="{% static 'images/logo_head.png' %}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{% static 'images/logo_head.png' %}">
 
-	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
-
+	
     <!-- Custom & Default Styles -->
     <style>
          @font-face {

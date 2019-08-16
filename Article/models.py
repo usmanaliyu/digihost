@@ -6,8 +6,6 @@ from django.urls import reverse
 from taggit.managers import TaggableManager
 
 
-
-
 # Create your models here.
 
 class Category(models.Model):
@@ -25,6 +23,7 @@ class Category(models.Model):
         return self.name
 
 class Article(models.Model):
+    meta_description=models.TextField(blank=False)
     popular = models.CharField(max_length=50, blank=True, choices=(('true','True'),('false','False')))
     category = models.ForeignKey(Category,on_delete=models.CASCADE, default=1,)
     preview_image = models.ImageField(upload_to='upload/',blank=True)
@@ -54,6 +53,18 @@ class Article(models.Model):
     sub1_child5_body = models.TextField(max_length=1000, blank=True)
     sub1_child5_image = models.ImageField(upload_to='upload', blank=True)
     blockquote1 = models.TextField(max_length=500, blank=True)
+
+
+    l_1_1=models.CharField(max_length=1000,blank=True)
+    l_1_2=models.CharField(max_length=1000,blank=True)
+    l_1_3=models.CharField(max_length=1000,blank=True)
+    l_1_4=models.CharField(max_length=1000,blank=True)
+    l_1_5=models.CharField(max_length=1000,blank=True)
+    l_1_6=models.CharField(max_length=1000,blank=True)
+    l_1_7=models.CharField(max_length=1000,blank=True)
+    l_1_8=models.CharField(max_length=1000,blank=True)
+    l_1_9=models.CharField(max_length=1000,blank=True)
+    l_1_10=models.CharField(max_length=1000,blank=True)
 
     part2 = models.CharField(blank=True,max_length=200, choices=(('true','True'),('false','False')))
     sub2 = models.CharField(max_length=200, blank=True)
@@ -137,6 +148,18 @@ class Article(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
 
 
+    test11=models.CharField(max_length=100)    
+
+    l_2_1=models.CharField(max_length=1000,blank=True)
+    l_2_2=models.CharField(max_length=1000,blank=True)
+    l_2_3=models.CharField(max_length=1000,blank=True)
+    l_2_4=models.CharField(max_length=1000,blank=True)
+    l_2_5=models.CharField(max_length=1000,blank=True)
+    l_2_6=models.CharField(max_length=1000,blank=True)
+    l_2_7=models.CharField(max_length=1000,blank=True)
+    l_2_8=models.CharField(max_length=1000,blank=True)
+    l_2_9=models.CharField(max_length=1000,blank=True)
+    l_2_10=models.CharField(max_length=1000,blank=True)
 
     def __str__(self):
         return self.title
@@ -152,5 +175,6 @@ class Article(models.Model):
         instance = self
         content_type = ContentType.objects.get_for_model(instance.__class__)
         return content_type
+
 
 
