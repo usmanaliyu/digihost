@@ -126,8 +126,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="{% url 'events' %}">Events</a></li>
-
+                           
 
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                             <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
@@ -143,8 +142,7 @@
 
                                     <li><a href="{% url 'profile_update' %}">Profile update</a></li>
                                     <li><a href="{% url 'logout' %}" title="">Logout</a></li>
-                                </ul>
-                            </li>
+                                </ul>                            </li>
                             {% else %}
                             <li> <a href="{% url 'login' %}" class=" shopicon" ><i class="fa fa-sign-in"></i></a></li>
                              {% endif %}

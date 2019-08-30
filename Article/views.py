@@ -21,7 +21,7 @@ from django.conf import settings
 
 @cache_page(60 * 15)
 def home(request):
-    instance_list = Article.objects.all()
+    instance_list = Article.objects.all().order_by('-pub_date')
     categories = Category.objects.all()
 
     paginator = Paginator(instance_list, 5)
@@ -47,7 +47,7 @@ def home(request):
 
 @cache_page(60 * 15)
 def Articles_list(request):
-    instance_list= Article.objects.all()
+    instance_list= Article.objects.all().order_by('-pub_date')
     categories = Category.objects.all()
 
     paginator = Paginator(instance_list, 10)
@@ -73,7 +73,7 @@ def Articles_list(request):
 @cache_page(60 * 15)
 def list_of_articles_by_category(request, category_slug):
 
-    instance = Article.objects.all()
+    instance = Article.objects.all().order_by('-pub_date')
     categories = Category.objects.all()
 
     sub = SubscribeForm(request.POST)
@@ -108,7 +108,7 @@ def list_of_articles_by_category(request, category_slug):
 def tagged(request, tags_slug):
     categories = Category.objects.all()
     tag_category = Tag.objects.all()
-    instance = Article.objects.all()
+    instance = Article.objects.all().order_by('-pub_date')
 
     sub = SubscribeForm(request.POST)
     if sub.is_valid():
@@ -262,7 +262,7 @@ def search(request):
 
 
 
-        )
+        ).order_by('-pub_date')
         content ={
             'search_term':search_term,
             'instance':search_result,
@@ -272,3 +272,4 @@ def search(request):
         return render(request,'blog/search.html',content)
     else:
         return redirect('home')
+

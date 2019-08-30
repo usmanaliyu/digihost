@@ -24,8 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ['165.22.124.9','startup-africa.com','www.startup-africa.com']
 
 
@@ -34,8 +33,8 @@ ALLOWED_HOSTS = ['165.22.124.9','startup-africa.com','www.startup-africa.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.sitemaps',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -61,7 +60,7 @@ INSTALLED_APPS = [
 
 
 ]
-
+SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
